@@ -62,7 +62,7 @@ online-quiz-competition-platform-1-/
 ## 7. Installation / Setup
 Download or clone the repository:
 ```bash
-git clone https://github.com/24A31A05EG/online-quiz-competition-platform-1-.git
+git clone https://github.com/25-A35A0523/online_quiz_competition_platform.git
 ```
 Open the project folder.
 
@@ -109,13 +109,13 @@ Run it using either method:
 
 ## 11. Authors
 
-### 👑 Team Lead
+### 👑 Team Member
 | Field | Details |
 |---|---|
-| **Name** | Majji Kavya |
-| **Role** | Team Lead – Core Logic, Quiz Engine & Full Project Integration |
-| **Responsibilities** | Project architecture & folder setup, Quiz logic (quiz.js) — dynamic question loading, score tracking, option handling & result redirection, Full HTML + CSS + JS integration, Navigation flow & linking, Final verification of all modules, Bug fixing & end-to-end testing |
-| **LinkedIn URL** | [https://www.linkedin.com/in/kavya-majji-a47a0832a/](https://www.linkedin.com/in/kavya-majji-a47a0832a/) |
+| **Name** | Palika Renuka |
+| **Role** | Team Member – quiz Logic and frontend development  |
+| **Responsibilities** |  Developed standard and custom quiz logic, Implemented result logic (score calculation and display), Designed and structured HTML & CSS for quiz and result modules, Collected and prepared datasets for quiz questions, Integrated complete quiz flow, Performed testing and bug fixing |
+| **LinkedIn URL** | [https//www.linkedin.com/in/renuka-palika]
 
 ---
 
@@ -123,7 +123,7 @@ Run it using either method:
 
 | Name | Role | Responsibilities |
 |---|---|---|
-| **Renuka** | HTML Developer – Structure Creator | Built all HTML pages: `index.html`, `login.html`, `quiz.html`, `result.html`, `leaderboard.html`; added question containers, option buttons, timer section, score display, and navigation links |
+| **Kavya** | Team lead -  Developed About, Home (index), and Login pages using HTML & CSS, Implemented login functionality (validation & user input handling), Designed page structure and navigation flow, Integrated login module with overall project, Testing and debugging | |
 | **Shyam** | CSS Designer – UI & Animations | Styled the entire platform (`style.css`) — card layout, color theme, responsive design, hover effects, smooth transitions, and timer warning color change |
 | **Reetya** | Data & Logic Developer | Created quiz questions bank (`questions.js`) with 20+ questions across categories; implemented login flow (`auth.js`) using localStorage; built leaderboard logic (`leaderboard.js`) with score sorting and top-5 display |
 
