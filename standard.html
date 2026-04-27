@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Standard Quiz</title>
+
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/standard.css">
+
+  <!-- Font Awesome (icons) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+
+<body>
+  <!-- Top Sticky Navbar -->
+<div id="top-navbar">
+  <div class="navbar-left">
+    <div class="navbar-logo">
+      <i class="fas fa-brain"></i>
+      <span>QuizNova</span>
+    </div>
+  </div>
+
+  <div class="navbar-right">
+    <a href="dashboard.html"><i class="fas fa-home"></i> Home</a>
+    <a href="about.html"><span class="info-circle"><i class="fas fa-info"></i></span> About</a>
+   
+    <a href="login.html" class="logout-btn">Logout</a>
+  </div>
+</div>
+
+  <!-- ================= QUIZ HEADER ================= -->
+  <div class="quiz-header">
+    <div class="brain-icon">
+      <i class="fas fa-brain"></i>
+    </div>
+
+    <h1 class="quiz-title">Quiz Challenge</h1>
+    <p class="quiz-subtitle">
+      Test your knowledge with these questions
+    </p>
+  </div>
+
+  <!-- ================= TOP STATUS ================= -->
+  <div class="quiz-status-wrapper">
+    <div class="quiz-status">
+
+      <div class="status-card answered">
+        <span class="icon">✔</span>
+        <span id="answered-count">0</span>
+      </div>
+
+      <div class="status-card left">
+        <span class="icon">?</span>
+        <span id="left-count">0</span>
+      </div>
+
+      <div class="status-card percent">
+        <span><span id="percent-count">0</span>% complete</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= QUIZ CONTENT ================= -->
+  <div id="quiz-container"></div>
+
+  <!-- ================= STICKY BOTTOM BAR ================= -->
+  <div id="sticky-bar">
+
+    <div class="sticky-left">
+      <div class="sticky-item">
+        ⏱ <span id="sticky-timer">00:00</span>
+      </div>
+
+      <div class="sticky-item completed">
+        ✔ <span id="sticky-completed">0/0</span>
+      </div>
+
+      <div class="sticky-item">
+        🟢 <span id="sticky-percent">0%</span>
+      </div>
+    </div>
+
+    <button id="submit-btn" onclick="submitQuiz()">
+      <i class="fa-solid fa-paper-plane"></i>
+      Submit Quiz
+    </button>
+
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="js/standard.js"></script>
+  <script>
+    
+   localStorage.setItem("lastQuiz","standard");
+  document.addEventListener("DOMContentLoaded", startStandardQuiz);
+</script>
+
+</body>
+</html>

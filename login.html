@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - QuizNova</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="popup-message" class="popup"></div>
+
+<nav class="navbar">
+    <div class="logo">
+        <i class="fas fa-brain"></i> QuizNova
+    </div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="login.html" class="active">Login</a>
+        <a href="register.html" class="register-btn">Register</a>
+    </div>
+</nav>
+
+<section class="auth-wrapper">
+
+    <div class="auth-card">
+
+        <h2>Welcome Back</h2>
+        <p class="auth-subtitle">Sign in to continue your learning journey</p>
+
+        <form id="loginForm">
+
+            <label>Username / Email</label>
+            <input type="text" id="username" placeholder="Enter your username or email" required>
+
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <div class="auth-options">
+
+                <!-- ✅ FIXED CHECKBOX -->
+                <label class="checkbox-row">
+                    <input type="checkbox" id="remember">
+                    <span>Remember me</span>
+                </label>
+
+                <a href="#">Forgot password?</a>
+
+            </div>
+
+            <button type="submit" class="auth-btn">Sign In</button>
+
+            <p class="switch-text">
+                Don't have an account?
+                <a href="register.html">Sign up now</a>
+            </p>
+
+        </form>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+    <h3>QuizNova</h3>
+    <p>Challenge yourself with exciting quizzes and track your performance in real time.</p>
+</footer>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>

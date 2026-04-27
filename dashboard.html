@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QuizNova - Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<nav class="topbar">
+    <div class="brand">QuizNova</div>
+    <button onclick="logout()" class="logout-btn">Logout</button>
+</nav>
+
+<div class="dashboard-container">
+
+    <!-- HEADER -->
+    <div class="dashboard-header">
+        <div class="icon-circle">🧠</div>
+        <h1 id="welcomeText"></h1>
+        <p>Sharpen your skills and maintain your daily streak.</p>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h3>⭐ Total Score</h3>
+            <p id="userScore"></p>
+        </div>
+
+        <div class="stat-card">
+            <h3>🔥 Daily Streak</h3>
+            <p id="userStreak"></p>
+        </div>
+    </div>
+
+    <!-- MAIN GRID -->
+    <div class="main-grid">
+
+        <!-- QUIZ OPTIONS -->
+        <div class="card">
+            <h2> ▶ Quiz Options</h2>
+
+            <div class="quiz-btn blue" onclick="goTo('standard.html')">
+                ▶ Standard Quiz
+            </div>
+
+            <div class="quiz-btn green" onclick="goTo('custom.html')">
+                ⚙ Custom Quiz
+            </div>
+
+            <div class="quiz-btn purple" onclick="goTo('daily.html')">
+                📅 Daily Challenge
+            </div>
+        </div>
+
+        <!-- LEADERBOARD -->
+        <div class="card">
+            <h2>🏆Leaderboard</h2>
+            <div id="leaderboardList"></div>
+            <a href="leaderboard.html" class="view-link">
+                View Full Leaderboard →
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+/* LOGIN CHECK */
+let user = JSON.parse(localStorage.getItem("loggedInUser")) ||
+           JSON.parse(sessionStorage.getItem("loggedInUser"));
+
+if (!user) {
+    window.location.replace("login.html");
+}
+
+let users = JSON.parse(localStorage.getItem("users")) || [];
+
+let uniqueUsers = [];
+
+users.forEach(u => {
+    if(!uniqueUsers.some(x => x.email === u.email)){
+        uniqueUsers.push(u);
+    }
+});
+
+const index = users.findIndex(u => u.email === user.email);
+
+/* WELCOME */
+document.getElementById("welcomeText").innerText =
+    "Welcome back, " + users[index].username + " 👋";
+
+/* STATS */
+document.getElementById("userScore").innerText =
+    users[index].score || 0;
+
+document.getElementById("userStreak").innerText =
+    users[index].streak || 0;
+
+/* LEADERBOARD */
+let sortedUsers = [...users].sort((a,b) =>
+    (b.score || 0) - (a.score || 0)
+);
+
+let html = "";
+
+sortedUsers.slice(0,5).forEach((u, i) => {
+
+html += `
+<div class="leader-row">
+<span>#${i+1} ${u.username}</span>
+<span>⭐ ${u.score || 0} pts</span>
+</div>
+`;
+
+});
+
+document.getElementById("leaderboardList").innerHTML = html;
+
+/* FUNCTIONS */
+function logout() {
+    localStorage.removeItem("loggedInUser");
+    sessionStorage.removeItem("loggedInUser");
+    window.location.replace("login.html");
+}
+
+function goTo(page){
+    window.location.href = page;
+}
+
+</script>
+<script>
+
+function takeQuiz(){
+
+let lastQuiz = localStorage.getItem("lastQuiz");
+
+if(lastQuiz === "custom"){
+window.location.href = "custom.html";
+}
+else{
+window.location.href = "standard.html";
+}
+
+}
+
+</script>
+
+
+</body>
+</html>
