@@ -1,0 +1,571 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #eef2ff, #f8fafc);
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: #1e40af;
+    color: white;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid white;
+}
+
+.register-btn {
+    background: orange;
+    padding: 8px 15px;
+    border-radius: 6px;
+}
+
+/* ================= MAIN CONTAINER ================= */
+.background-box {
+    width: 85%;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 60px 20px;
+    min-height: 85vh;
+    text-align: center;
+}
+
+/* ================= HERO ================= */
+.hero-icon {
+    background: #2563eb;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    box-shadow: 0 10px 25px rgba(37,99,235,0.3);
+}
+
+.subtitle {
+    color: #555;
+    margin-top: 10px;
+}
+
+/* ================= JOIN CARD ================= */
+.join-card {
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    max-width: 500px;
+    transition: 0.3s ease;
+}
+
+.join-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ================= BUTTONS ================= */
+
+/* PRIMARY BUTTON (Register) */
+.primary-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background: #2563eb;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        0 0 15px rgba(37, 99, 235, 0.6),
+        0 0 30px rgba(37, 99, 235, 0.4);
+}
+
+/* LOGIN BUTTON */
+.secondary-btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    background: white;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+    transition: 0.3s ease;
+}
+
+.secondary-btn:hover {
+    background: #2563eb;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 
+        0 0 15px rgba(37, 99, 235, 0.6),
+        0 0 30px rgba(37, 99, 235, 0.4);
+}
+
+/* CTA BUTTON */
+.cta-btn {
+    margin-top: 20px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    background: white;
+    color: #2563eb;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        0 0 20px rgba(255, 255, 255, 0.8),
+        0 0 40px rgba(255, 255, 255, 0.4);
+}
+
+/* ================= FEATURES ================= */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: white;
+    padding: 30px;
+    width: 260px;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-8px);
+}
+
+.feature .icon {
+    font-size: 30px;
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+
+/* ================= CTA SECTION ================= */
+.cta {
+    margin-top: 70px;
+    padding: 50px;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    color: white;
+}
+
+/* ================= AUTH PAGES ================= */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.auth-card {
+    background: white;
+    width: 400px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.auth-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.auth-btn:hover {
+    box-shadow: 
+        0 0 15px rgba(37, 99, 235, 0.6),
+        0 0 30px rgba(37, 99, 235, 0.4);
+}
+
+/* ================= POPUP ================= */
+.popup {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    color: white;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.popup.show {
+    top: 20px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #1e293b;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .join-card {
+        width: 90%;
+    }
+
+    .auth-card {
+        width: 90%;
+    }
+}
+/* ================= ABOUT PAGE ================= */
+
+.about-section {
+    width: 85%;
+    max-width: 1100px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.about-header h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.about-header p {
+    color: #555;
+    margin-bottom: 60px;
+}
+
+.about-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-card {
+    background: white;
+    padding: 30px;
+    width: 280px;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+}
+
+.about-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    color: white;
+    margin: 0 auto 20px;
+}
+
+.about-icon.blue { background: #2563eb; }
+.about-icon.green { background: #16a34a; }
+.about-icon.orange { background: #f59e0b; }
+
+/* Mission Section */
+
+.mission-box {
+    margin-top: 80px;
+    padding: 50px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+}
+
+.mission-box h2 {
+    margin-bottom: 15px;
+}
+
+.mission-box p {
+    margin-bottom: 40px;
+}
+
+.mission-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: rgba(255,255,255,0.15);
+    padding: 25px 40px;
+    border-radius: 12px;
+}
+
+.stat-card h3 {
+    font-size: 28px;
+}
+
+.stat-card p {
+    font-size: 14px;
+}
+/* ================= LOGIN PAGE IMPROVED ================= */
+
+.auth-wrapper {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-card {
+    background: white;
+    width: 420px;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.auth-card:hover {
+    transform: translateY(-5px);
+}
+
+.auth-subtitle {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+form label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s ease;
+}
+
+form input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
+    outline: none;
+}
+
+.auth-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.remember-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.auth-options a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.auth-options a:hover {
+    text-decoration: underline;
+}
+
+/* Glowing Sign In Button */
+.auth-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.auth-btn:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 0 15px rgba(37, 99, 235, 0.6),
+        0 0 30px rgba(37, 99, 235, 0.4);
+}
+
+.switch-text {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.switch-text a {
+    color: #2563eb;
+    text-decoration: none;
+}
+/* ===== CHECKBOX ALIGNMENT FIX ===== */
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.checkbox-row input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #2563eb; /* Makes checkbox blue */
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #eef2f7;
+}
+
+/* CENTER WRAPPER */
+.dashboard-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* MAIN CARD */
+.dashboard-card {
+    background: #f8fafc;
+    width: 1000px;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* GRID */
+.dashboard-grid {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* BOX */
+.box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    flex: 1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+/* QUIZ BUTTONS */
+.quiz-option {
+    padding: 16px 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.quiz-option:hover {
+    transform: translateY(-3px);
+}
+
+.blue { background: #4e73df; }
+.green { background: #1cc88a; }
+.purple { background: #9b59b6; }
+
+/* LEADERBOARD ROW */
+.leader-row {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* STATS */
+.stats {
+    margin-top: 30px;
+    font-weight: 500;
+}
