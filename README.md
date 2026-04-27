@@ -123,7 +123,7 @@ Run it using either method:
 
 | Name | Role | Responsibilities |
 |---|---|---|
-| **Kavya** | Team lead -  Developed About, Home (index), and Login pages using HTML & CSS, Implemented login functionality (validation & user input handling), Designed page structure and navigation flow, Integrated login module with overall project, Testing and debugging | |
+| **Kavya** | HTML developer |  Developed About, Home (index), and Login pages using HTML & CSS, Implemented login functionality (validation & user input handling), Designed page structure and navigation flow, Integrated login module with overall project, Testing and debugging |
 | **Shyam** | CSS Designer – UI & Animations | Styled the entire platform (`style.css`) — card layout, color theme, responsive design, hover effects, smooth transitions, and timer warning color change |
 | **Reetya** | Data & Logic Developer | Created quiz questions bank (`questions.js`) with 20+ questions across categories; implemented login flow (`auth.js`) using localStorage; built leaderboard logic (`leaderboard.js`) with score sorting and top-5 display |
 
